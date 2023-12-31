@@ -1,0 +1,142 @@
+*{
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg,#00F2F2,#9F2042);
+}
+
+button {
+    color: #fff;
+    border: 2vh solid #000;
+    border-radius: 5vw;
+    cursor: pointer;
+    font-size: 16vh;
+}
+
+button:hover {
+    background-color: #2203ea;
+    text-align: center;
+}
+
+h1{
+    text-align: center;
+    color: #2203ea;
+    background: transparent;
+}
+.container{
+    height: 190vh;
+    width: 100%;
+    
+}
+.card{
+    width: 92vw;
+    height: 60vh;
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    float: right;
+    align-items:flex-end; 
+    background: linear-gradient(90deg,#9F2042,#00F2F2);
+    border-radius: 1.0rem;
+    margin: 0.5rem 2.02rem 0.2rem;
+    padding:0.2rem 0.2rem;
+    border: 0.2rem solid #000;
+    box-shadow: 0 0 1.5rem black;
+    
+}
+.left{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #F6EFA6;
+    background: transparent;
+    font-size: larger;
+    font-weight: bolder;
+}
+.btn,.btn2,.btn3,.btn4,.btn5{
+    margin: auto;
+    display: block;
+    height: 5vh;
+    width: 16vw;
+    background: transparent;
+    font-size: larger;
+    font-weight: bolder;
+    color: #F6EFA6;
+    border: 0.5vh solid #000;
+    cursor: pointer;
+    box-shadow: 0 0 1rem black;
+}
+
+input{
+    width: 48%;
+    color: #fff;
+    background: transparent;
+    text-align:right;
+    border: 0.8vh solid #000;
+    outline: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-radius: 0.5rem;
+    margin-left: 0.2rem;
+    margin-bottom: 1.0rem;
+    padding-left: 0.5rem;
+    font-size: 1rem;
+}
+input::placeholder{
+    color: #fff;
+    font-size: larger;
+    font-weight: 200;
+    text-align: left;   
+}
+p{
+    text-align: center;
+}
+.card-2{
+    width: 92vw;
+    height: 30vh;
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    float: right;
+    background: linear-gradient(90deg,#9F2042,#00F2F2);
+    border-radius: 1.0rem;
+    margin: 0.5rem 2.02rem 0.2rem;
+    padding:0.2rem 0.2rem;
+    border: 0.2rem solid #000;
+    box-shadow: 0 0 1.5rem black;
+}
+
+.card-3,.card-4,.card-5{
+    width: 92vw;
+    height: 30vh;
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    float: right;
+    background: linear-gradient(90deg,#9F2042,#00F2F2);
+    border-radius: 1.0rem;
+    margin: 0.5rem 2.02rem 0.2rem;
+    padding:0.2rem 0.2rem;
+    border: 0.2rem solid #000;
+    box-shadow: 0 0 1.5rem black;
+}
+.card-4,.card-5{
+    height: 20vh;    
+}
+.h3,.h3-1,.h3-2,.h3-3,.h3-4,.h3-5{
+    text-align: center;
+    box-shadow: 0 0 1rem #000;
+   
+}
+@media (max-width:998px) {
+    html{
+        font-size: 55%;
+    }
+}
+input[type="number"]::-webkit-inner-spin-button,
+        input[type="number"]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+         
+        }
+
+        
