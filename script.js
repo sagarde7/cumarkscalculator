@@ -2,7 +2,7 @@ let inpBtn=document.querySelectorAll(".inp");
 let btnBtn=document.querySelector(".btn");
 let sum=0;
 btnBtn.addEventListener("click",()=>{
-    console.log("clicked");
+    
     sum=0;
     for (let index = 0; index < inpBtn.length-1; index++) {
         if (inpBtn[index].value==="") {
@@ -16,7 +16,7 @@ btnBtn.addEventListener("click",()=>{
             else if(index>2 && index<7){
                 sum+=parseFloat((inpBtn[index].value)/3);
             }
-            else if(index==11){
+            else if(index==12){
                 sum+=parseFloat((inpBtn[index].value)/4);
             }
             else{
@@ -24,20 +24,19 @@ btnBtn.addEventListener("click",()=>{
             }
         } 
     }
-    console.log(sum);
+
     let internal=sum;
     if(sum==0){
         alert("Enter all compulsory fields");
     }
-    else if(inpBtn[12].value===""){
+    else if(inpBtn[13].value===""){
         h3Btn=document.querySelector(".h3");
-        h3Btn.textContent="Internal Marks = "+internal+" which will be "+(internal/2)+" out of 70";
+        h3Btn.textContent="Internal Marks = "+internal.toFixed(2)+" which will be "+(internal/2).toFixed(2)+" out of 70";
     }
     else{
-        console.log(inpBtn[12].value);
+        console.log(inpBtn[13].value);
         sum=(internal/2);
-        sum+=parseFloat(inpBtn[12].value);
-        console.log("sum",sum);
+        sum+=parseFloat(inpBtn[13].value)/2;
         let tm=sum;
         sum=parseFloat(sum);
         h3Btn=document.querySelector(".h3");
@@ -75,7 +74,7 @@ btn1Btn.addEventListener("click",()=>{
     }
     else if(inp1Btn[6].value===""){
         h3Btn=document.querySelector(".h3-1");
-        h3Btn.textContent="Internal Marks = "+internal+" which will be "+(internal)+" out of 40";
+        h3Btn.textContent="Internal Marks = "+internal.toFixed(2)+" which will be "+(internal).toFixed(2)+" out of 40";
     }
     else{
         sum+=parseFloat(inp1Btn[6].value);
@@ -114,7 +113,7 @@ btn2Btn.addEventListener("click",()=>{
     }
     else if(inp2Btn[4].value===""){
         h3Btn=document.querySelector(".h3-3");
-        h3Btn.textContent="Internal Marks = "+internal+" which will be "+(internal)+" out of 140";
+        h3Btn.textContent="Internal Marks = "+internal.toFixed(2)+" which will be "+(internal).toFixed(2)+" out of 140";
     }
     else{
         sum+=parseFloat(inp2Btn[4].value);
@@ -154,7 +153,7 @@ btn3Btn.addEventListener("click",()=>{
     }
     else if(inp3Btn[2].value===""){
         h3Btn=document.querySelector(".h3-4");
-        h3Btn.textContent="Internal Marks = "+internal+" which will be "+(internal)+" out of 60";
+        h3Btn.textContent="Internal Marks = "+internal.toFixed(2)+" which will be "+(internal.toFixed(2))+" out of 60";
     }
     else{
         sum+=parseFloat(inp3Btn[2].value);
@@ -239,15 +238,15 @@ function grade(sum,tm,internal) {
         grade2="F";
     }
     if(tm===0){
-        str=` Total Marks = ${sum} and the most probable grade will be ${grade1} `;
+        str=` Total Marks = ${(sum).toFixed(2)} and the most probable grade will be ${grade1} `;
         
     }
     else if(grade1!=grade2){
-        str=` Internal Marks = ${internal/2} and Total Marks = ${tm/2} and the most probable grade will be ${grade1} or ${grade2}`;
+        str=` Internal Marks = ${(internal/2).toFixed(2)} and Total Marks = ${(tm/2).toFixed(2)} and the most probable grade will be ${grade1} or ${grade2}`;
         
     }
     else{
-        str=` Internal Marks = ${internal/2} and Total Marks = ${tm/2} and the most probable grade will be ${grade1}`;
+        str=` Internal Marks = ${(internal/2).toFixed(2)} and Total Marks = ${(tm/2).toFixed(2)} and the most probable grade will be ${grade1}`;
     }
     console.log(str);
     return str;
