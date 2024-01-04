@@ -2,7 +2,7 @@ let inpBtn=document.querySelectorAll(".inp");
 let btnBtn=document.querySelector(".btn");
 let sum=0;
 btnBtn.addEventListener("click",()=>{
-    
+    console.log("clicked");
     sum=0;
     for (let index = 0; index < inpBtn.length-1; index++) {
         if (inpBtn[index].value==="") {
@@ -17,14 +17,14 @@ btnBtn.addEventListener("click",()=>{
                 sum+=parseFloat((inpBtn[index].value)/3);
             }
             else if(index==12){
-                sum+=parseFloat((inpBtn[index].value)/4);
+                sum+=parseFloat((inpBtn[index].value)/3);
             }
             else{
                 sum+=parseFloat(inpBtn[index].value);
             }
         } 
     }
-
+    console.log(sum);
     let internal=sum;
     if(sum==0){
         alert("Enter all compulsory fields");
@@ -37,8 +37,10 @@ btnBtn.addEventListener("click",()=>{
         console.log(inpBtn[13].value);
         sum=(internal/2);
         sum+=parseFloat(inpBtn[13].value)/2;
+        console.log("sum",sum);
         let tm=sum;
         sum=parseFloat(sum);
+        console.log(sum," ",internal," ",tm);
         h3Btn=document.querySelector(".h3");
         let s=grade(sum,tm*2,internal);
         h3Btn.textContent=s;
@@ -46,7 +48,6 @@ btnBtn.addEventListener("click",()=>{
 })
 let inp1Btn=document.querySelectorAll(".inp2");
 let btn1Btn=document.querySelector(".btn2");
-
 sum=0;
 btn1Btn.addEventListener("click",()=>{
     sum=0;
@@ -56,11 +57,11 @@ btn1Btn.addEventListener("click",()=>{
             break;
         }       
         else{
-            if(index>=1 && index <=3){
+            if(index>=2 && index <=3){
                 sum+=parseFloat((inp1Btn[index].value)/2);
             }
             else if(index==5){
-                sum+=parseFloat((inp1Btn[index].value)/4);
+                sum+=parseFloat((inp1Btn[index].value)/3);
             }
             else{
                 sum+=parseFloat(inp1Btn[index].value);
@@ -193,7 +194,7 @@ let grade1="";
 let grade2="";
 let str="";
 function grade(sum,tm,internal) {
-    console.log("g");
+    
     if(sum>100 || sum<0){
         str="Cannot be Generated";
     }
@@ -202,7 +203,7 @@ function grade(sum,tm,internal) {
         grade2="A+";
     }
     if(sum<100 && sum>94 ){
-        grade1="A+";
+        grade1="A";
         grade2="A";
     }
     else if(sum<95 && sum>90){
