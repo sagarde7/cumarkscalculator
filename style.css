@@ -106,7 +106,9 @@ p{
     border: 0.2rem solid #000;
     box-shadow: 0 0 1.5rem black;
 }
-
+footer{
+    margin-top: 1rem;
+}
 .card-3,.card-4,.card-5{
     width: 92vw;
     height: 30vh;

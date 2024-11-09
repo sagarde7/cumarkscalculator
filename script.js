@@ -121,7 +121,7 @@ btn2Btn.addEventListener("click",()=>{
         let tm=sum;
         sum=parseFloat(sum);
         h3Btn=document.querySelector(".h3-3");
-        let s=grade(sum,tm,internal);
+        let s=grade(sum/2,tm,internal);
         h3Btn.textContent=s;
     }
 })
@@ -194,6 +194,7 @@ let grade1="";
 let grade2="";
 let str="";
 function grade(sum,tm,internal) {
+    console.log("new = ",sum,tm,internal);
     
     if(sum>100 || sum<0){
         str="Cannot be Generated";
@@ -202,7 +203,7 @@ function grade(sum,tm,internal) {
         grade1="A+";
         grade2="A+";
     }
-    if(sum<100 && sum>94 ){
+    else if(sum<100 && sum>94 ){
         grade1="A";
         grade2="A";
     }
