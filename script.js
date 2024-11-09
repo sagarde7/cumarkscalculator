@@ -99,7 +99,7 @@ btn2Btn.addEventListener("click",()=>{
         }       
         else{
             if(index==1){
-                sum+=parseFloat(((inp2Btn[index].value)/300)*45);
+                sum+=parseFloat(((inp2Btn[index].value)/300)*50);
             }
             
             else{
@@ -198,8 +198,9 @@ function grade(sum,tm,internal) {
     
     if(sum>100 || sum<0){
         str="Cannot be Generated";
+        return str;
     }
-    if(sum===100){
+    else if(sum===100){
         grade1="A+";
         grade2="A+";
     }
