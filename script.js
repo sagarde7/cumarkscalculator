@@ -114,7 +114,7 @@ btn2Btn.addEventListener("click",()=>{
     }
     else if(inp2Btn[4].value===""){
         h3Btn=document.querySelector(".h3-3");
-        h3Btn.textContent="Internal Marks = "+internal.toFixed(2)+" which will be "+(internal).toFixed(2)+" out of 140";
+        h3Btn.textContent="Internal Marks = "+(internal.toFixed(2))+" which will be "+((internal/2).toFixed(2))+" out of 70";
     }
     else{
         sum+=parseFloat(inp2Btn[4].value);
@@ -204,8 +204,8 @@ function grade(sum,tm,internal) {
         grade1="A+";
         grade2="A+";
     }
-    else if(sum<100 && sum>94 ){
-        grade1="A";
+    else if(sum<100 && sum>=95 ){
+        grade1="A+";
         grade2="A";
     }
     else if(sum<95 && sum>90){
@@ -218,23 +218,27 @@ function grade(sum,tm,internal) {
     }
     else if(sum>74){
         grade1="B+";
-        grade2="B+";
+        grade2="B";
     }
     else if(sum>64){
         grade1="B";
-        grade2="B";
+        grade2="C+";
     }
     else if(sum>54){
         grade1="C+";
-        grade2="C+";
+        grade2="C";
+    }
+    else if(sum>50){
+        grade1="C";
+        grade2="D";
     }
     else if(sum>44){
-        grade1="C";
-        grade2="C";
+        grade1="D";
+        grade2="F";
     }
     else if(sum>33){
         grade1="D";
-        grade2="D";
+        grade2="F";
     }
     else{
         grade1="F";
