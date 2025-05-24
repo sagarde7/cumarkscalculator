@@ -92,32 +92,58 @@ let inp2Btn=document.querySelectorAll(".inp3");
 let btn2Btn=document.querySelector(".btn3");
 btn2Btn.addEventListener("click",()=>{
     sum=0;
-    for (let index = 0; index < inp2Btn.length-1; index++) {
+    let prac=0;
+    for (let index = 0; index <=5; index++) {
         if (inp2Btn[index].value==="") {
             sum=0;
             break;
         }       
         else{
-            if(index==1){
-                sum+=parseFloat(((inp2Btn[index].value)/300)*50);
+            if(index>=2 && index <=3){
+                sum+=parseFloat((inp2Btn[index].value)/2);
             }
+            else if(index==5){
+                sum+=parseFloat((inp2Btn[index].value)/3);
+            }
+            else{
+                sum+=parseFloat(inp2Btn[index].value);
+            }
+        } 
+    }
+    console.log(sum);
+    
+    for (let index = 6; index < inp2Btn.length-1; index++) {
+        if (inp2Btn[index].value==="") {
+            sum=0;
+            break;
+        }       
+        else{
+            if(index>=6 && index<=15){
+                prac+=parseFloat(inp2Btn[index].value);
+            }
+            
+            // sum+=parseFloat(((inp2Btn[index].value)/300)*50);
             
             else{
                 sum+=parseFloat(inp2Btn[index].value);
             }
         } 
     }
+    console.log(sum);
+    console.log(prac);
+    sum+=parseFloat(((prac)/300)*50);
     let internal=sum;
     console.log(sum);
+    console.log(inp2Btn.length-1);
     if(sum==0){
         alert("Enter all compulsory fields");
     }
-    else if(inp2Btn[4].value===""){
+    else if(inp2Btn[18].value===""){
         h3Btn=document.querySelector(".h3-3");
         h3Btn.textContent="Internal Marks = "+(internal.toFixed(2))+" which will be "+((internal/2).toFixed(2))+" out of 70";
     }
     else{
-        sum+=parseFloat(inp2Btn[4].value);
+        sum+=parseFloat(inp2Btn[18].value);
         let tm=sum;
         sum=parseFloat(sum);
         h3Btn=document.querySelector(".h3-3");
@@ -130,6 +156,7 @@ let btn3Btn=document.querySelector(".btn4");
 
 btn3Btn.addEventListener("click",()=>{
     sum=0;
+    let prac=0;
     console.log("3");
     for (let index = 0; index < inp3Btn.length-1; index++) {
         if (inp3Btn[index].value==="") {
@@ -137,8 +164,8 @@ btn3Btn.addEventListener("click",()=>{
             break;
         }       
         else{
-            if(index==0){
-                sum+=parseFloat(((inp3Btn[index].value)/300)*45);
+            if(index>=0 && index<=9){
+                prac+=parseFloat(inp3Btn[index].value);
             }
             
             else{
@@ -146,18 +173,19 @@ btn3Btn.addEventListener("click",()=>{
             }
         } 
     }
+    sum+=parseFloat(((prac)/300)*45);
     console.log("4");
     let internal=sum;
     console.log(sum);
     if(sum==0){
         alert("Enter all compulsory fields");
     }
-    else if(inp3Btn[2].value===""){
+    else if(inp3Btn[11].value===""){
         h3Btn=document.querySelector(".h3-4");
         h3Btn.textContent="Internal Marks = "+internal.toFixed(2)+" which will be "+(internal.toFixed(2))+" out of 60";
     }
     else{
-        sum+=parseFloat(inp3Btn[2].value);
+        sum+=parseFloat(inp3Btn[11].value);
         let tm=sum;
         sum=parseFloat(sum);
         h3Btn=document.querySelector(".h3-4");
@@ -186,6 +214,51 @@ btn4Btn.addEventListener("click",()=>{
     
     h3Btn=document.querySelector(".h3-5");
     let s=grade(sum*100,0,0);
+    console.log(s);
+    h3Btn.textContent=s;
+    }
+})
+let inp5Btn=document.querySelectorAll(".inp6");
+let btn5Btn=document.querySelector(".btn6");
+
+btn5Btn.addEventListener("click",()=>{
+    sum=0;
+    for (let index = 0; index < inp5Btn.length-2; index++) {
+        if (inp5Btn[index].value==="") {
+            sum=-1;
+            break;
+        }       
+        else{
+            if(index>=2 && index <=3){
+                sum+=parseFloat((inp5Btn[index].value)/2);
+            }
+            else if(index==5){
+                sum+=parseFloat((inp5Btn[index].value)/3);
+            }
+            else{
+                sum+=parseFloat(inp5Btn[index].value);
+            }
+        } 
+    }
+    for (let index = inp5Btn.length-2; index < inp5Btn.length; index++) {
+        if (inp5Btn[index].value==="") {
+            sum=-1;
+            break;
+        }       
+
+         
+    }
+    if(sum==-1){
+        alert("Enter all compulsory fields");
+    }
+    else{
+        console.log(sum);
+        
+    sum+=(parseFloat(inp5Btn[6].value)/(inp5Btn[7].value)*60);
+    console.log(sum);
+    
+    h3Btn=document.querySelector(".h3-6");
+    let s=grade(sum,0,0);
     console.log(s);
     h3Btn.textContent=s;
     }

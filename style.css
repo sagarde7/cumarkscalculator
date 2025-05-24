@@ -30,7 +30,7 @@ h1{
 }
 .card{
     width: 92vw;
-    height: 60vh;
+    height: 70vh;
     display: inline-flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -53,7 +53,7 @@ h1{
     font-size: larger;
     font-weight: bolder;
 }
-.btn,.btn2,.btn3,.btn4,.btn5{
+.btn,.btn2,.btn3,.btn4,.btn5,.btn6{
     margin: auto;
     display: block;
     height: 5vh;
@@ -94,7 +94,7 @@ p{
 }
 .card-2{
     width: 92vw;
-    height: 30vh;
+    height: 40vh;
     display: inline-flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -109,9 +109,15 @@ p{
 footer{
     margin-top: 1rem;
 }
-.card-3,.card-4,.card-5{
+.card-group {
+    margin-bottom: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.card-3,.card-4,.card-5,.card-6{
     width: 92vw;
-    height: 30vh;
+    height: 70vh;
     display: inline-flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -129,12 +135,16 @@ footer{
 .bottom{
     text-align: center;
 }
-.card-4,.card-5{
+.card-5{
     height: 20vh;    
 }
-.h3,.h3-1,.h3-2,.h3-3,.h3-4,.h3-5{
+.h3,.h3-1,.h3-2,.h3-3,.h3-4,.h3-5,.h3-6{
     text-align: center;
     box-shadow: 0 0 1rem #000;
+    color: #000;
+    background: transparent;
+    width:92%;
+    border-radius: 2rem;
    
 }
 @media (max-width:998px) {
