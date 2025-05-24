@@ -1,7 +1,8 @@
 *{
     margin: 0;
     padding: 0;
-    background: linear-gradient(135deg,#00F2F2,#9F2042);
+    background: #101828;
+    color:#F6EFA6;
 }
 
 button {
@@ -20,8 +21,8 @@ button:hover {
 
 h1{
     text-align: center;
-    color: #000;
     background: transparent;
+    font-weight: bold;
 }
 .container{
     height: 190vh;
@@ -69,7 +70,7 @@ h1{
 
 input{
     width: 48%;
-    color: #fff;
+    color: #F6EFA6;
     background: transparent;
     text-align:right;
     border: 0.8vh solid #000;
@@ -84,7 +85,7 @@ input{
     font-size: 1rem;
 }
 input::placeholder{
-    color: #fff;
+    color: #F6EFA6;
     font-size: larger;
     font-weight: 200;
     text-align: left;   
