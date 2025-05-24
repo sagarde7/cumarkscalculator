@@ -53,6 +53,7 @@ h1{
     background: transparent;
     font-size: larger;
     font-weight: bolder;
+    width: 100%;
 }
 .btn,.btn2,.btn3,.btn4,.btn5,.btn6{
     margin: auto;
@@ -138,6 +139,9 @@ footer{
 }
 .card-5{
     height: 20vh;    
+}
+.card-6{
+    height: 50vh;
 }
 .h3,.h3-1,.h3-2,.h3-3,.h3-4,.h3-5,.h3-6{
     text-align: center;
