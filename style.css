@@ -15,7 +15,7 @@ button {
 }
 
 button:hover {
-    background-color: #2203ea;
+    background-color: #101828;
     text-align: center;
 }
 
@@ -146,7 +146,7 @@ footer{
 .h3,.h3-1,.h3-2,.h3-3,.h3-4,.h3-5,.h3-6{
     text-align: center;
     box-shadow: 0 0 1rem #000;
-    color: #000;
+    color: #F6EFA6;
     background: transparent;
     width:92%;
     border-radius: 2rem;
